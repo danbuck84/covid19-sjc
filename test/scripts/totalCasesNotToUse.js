@@ -2,7 +2,7 @@ totalCases();
 
 async function totalCases() {
     const data = await getData();
-    const ctx = document.getElementById('total-cases').getContext('2d');
+    const ctx = document.getElementById('total-cases-not-to-use').getContext('2d');
     const options = {
         responsive: true,
         maintainAspectRatio: false,
@@ -76,7 +76,7 @@ async function totalCases() {
         const yRecovered = [];
         const yDown = [];
         
-        const response = await fetch('data.csv');
+        const response = await fetch('../assets/data.csv');
         const data = await response.text();
         
         const table = data.split('\n').slice(1);
