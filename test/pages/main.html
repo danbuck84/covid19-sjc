@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 em São José dos Campos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../assets/covid-sjc-logo.png" alt="Logotipo">
+        </div>
+        <ul>
+            <li>Painel Geral</li>
+            <li>Detalhado</li>
+            <li>Sobre</li>
+        </ul>
+    </nav>
+    <h6>Covid-19</h6>
+    <h1 id="head"><strong>Painel</strong> Coronavírus</h1>
+    <h5>Atualizado em: 08/06/2020 11:45</h5>
+    <section id="head-section">
+        <div class="container-green">
+            <div id="recovered-cases">
+                <h2>Casos Recuperados</h2>
+                <p id="recovered"></p>
+                <h2>Em acompanhamento</h2>
+                <p id="follow-up"></p>
+            </div>
+        </div>
+        <div class="container-plain">
+            <div class="positive-cases">
+                <h1>Casos Confirmados</h1>
+                <p id="positive-total"></p>
+                <h4>Acumulado</h4>
+                <p id="positive-new"></p>
+                <h4>Casos novos</h4>
+                <p id="incidency"></p>
+                <h4>Incidência</h4>
+            </div>
+        </div>
+        <div class="container-plain">
+            <div class="down-cases">
+                <h1>Óbitos Confirmados</h1>
+                <p id="down-total"></p>
+                <h2>Acumulado</h2>
+                <p id="down-new"></p>
+                <h2>Casos novos</h2>
+                <p id="lethality"></p>
+                <h2>Letalidade</h2>
+                <p id="mortality"></p>
+                <h2>Mortalidade</h2>
+            </div>
+        </div>
+    </section>
+    <section id="graph-positive">
+        <h1><strong>Casos</strong> Confirmados</h1>
+        <div class="container-graph-plain">
+            <h2>Casos novos de COVID-19 por data de notificação</h2>
+            <canvas id="positive-daily-new"></canvas>
+        </div>
+        <div class="container-graph-plain">
+            <h2>Casos novos de COVID-19 por semana de notificação</h2>
+            <canvas id="positive-weekly-new"></canvas>
+        </div>
+    </section>
+    <section id="graph-down">
+        <h1><strong>Óbitos</strong> Confirmados</h1>
+        <div class="container-graph-plain">
+            <h2>Óbitos de COVID-19 por data de notificação</h2>
+            <canvas id="down-daily-new"></canvas>
+        </div>
+        <div class="container-graph-plain">
+            <h2>Óbitos de COVID-19 por semana de notificação</h2>
+            <canvas id="down-weekly-new"></canvas>
+        </div>
+    </section>
+
+    <script src="../scripts/recoveredCases.js"></script>            
+    <script src="../scripts/followUp.js"></script>            
+    <script src="../scripts/positiveCases.js"></script>            
+    <script src="../scripts/downCases.js"></script>            
+    <script src="../scripts/positiveCasesDailyGraph.js"></script>            
+    <script src="../scripts/positiveCasesWeeklyGraph.js"></script>            
+    <script src="../scripts/downCasesDailyGraph.js"></script>            
+    <script src="../scripts/downCasesWeeklyGraph.js"></script>            
+</body>
+<footer>Desenvolvido por Daniel Buck, Junho de 2020</footer>
+</html>
