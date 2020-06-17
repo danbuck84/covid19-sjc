@@ -22,6 +22,10 @@
     <h6>Covid-19</h6>
     <h1 id="head"><strong>Painel</strong> Coronavírus</h1>
     <h5>Atualizado em: 08/06/2020 11:45</h5>
+    <div class="csv">
+        <span><img src="/assets/download-button.svg" alt="download"></span>
+        <p>Arquivo CSV</p>
+    </div>
     <section id="head-section">
         <div class="container-green">
             <div id="recovered-cases">
@@ -34,6 +38,7 @@
         <div class="container-plain">
             <div class="positive-cases">
                 <h1>Casos Confirmados</h1>
+                <button><img src="" alt=""></button>
                 <p id="positive-total"></p>
                 <h4>Acumulado</h4>
                 <p id="positive-new"></p>
@@ -45,6 +50,7 @@
         <div class="container-plain">
             <div class="down-cases">
                 <h1>Óbitos Confirmados</h1>
+                <button><img src="" alt=""></button>
                 <p id="down-total"></p>
                 <h2>Acumulado</h2>
                 <p id="down-new"></p>
@@ -55,6 +61,19 @@
                 <h2>Mortalidade</h2>
             </div>
         </div>
+        <div class="container-plain">
+            <div class="about-box">
+                <h1>Sobre o painel</h1>
+                <p>Diariamente, a prefeitura de São José dos Campos divulga dados
+                    consolidados sobre a COVID-19.
+                    <br/>
+                    Saiba mais sobre o painel.
+                </p>
+                <div class="button-saiba-mais">
+                    <p>Saiba mais</p>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="graph-positive">
         <h1><strong>Casos</strong> Confirmados</h1>
@@ -62,9 +81,29 @@
             <h2>Casos novos de COVID-19 por data de notificação</h2>
             <canvas id="positive-daily-new"></canvas>
         </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
+        </div>
         <div class="container-graph-plain">
-            <h2>Casos novos de COVID-19 por semana de notificação</h2>
+            <h2>Casos novos de COVID-19 por semana Epidemiológica de notificação</h2>
             <canvas id="positive-weekly-new"></canvas>
+        </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
+        </div>
+        <div class="container-graph-plain">
+            <h2>Casos acumulados de COVID-19 por data de notificação</h2>
+            <canvas id="positive-daily-total"></canvas>
+        </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
+        </div>
+        <div class="container-graph-plain">
+            <h2>Casos acumulados de COVID-19 por semana Epidemiológica de notificação</h2>
+            <canvas id="positive-weekly-total"></canvas>
+        </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
         </div>
     </section>
     <section id="graph-down">
@@ -73,9 +112,29 @@
             <h2>Óbitos de COVID-19 por data de notificação</h2>
             <canvas id="down-daily-new"></canvas>
         </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
+        </div>
         <div class="container-graph-plain">
-            <h2>Óbitos de COVID-19 por semana de notificação</h2>
+            <h2>Óbitos de COVID-19 por semana Epidemiológica de notificação</h2>
             <canvas id="down-weekly-new"></canvas>
+        </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
+        </div>
+        <div class="container-graph-plain">
+            <h2>Óbitos acumulados de COVID-19 por data de notificação</h2>
+            <canvas id="down-daily-total"></canvas>
+        </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
+        </div>
+        <div class="container-graph-plain">
+            <h2>Óbitos acumulados de COVID-19 por semana Epidemiológica de notificação</h2>
+            <canvas id="down-weekly-total"></canvas>
+        </div>
+        <div class="fonte">
+            <a href="#"><h6>Fonte: REDCAP, E-SUS e SIVEP GRIPE. São José dos Campos, 2020</h6></a>
         </div>
     </section>
 
@@ -88,5 +147,5 @@
     <script src="../scripts/downCasesDailyGraph.js"></script>            
     <script src="../scripts/downCasesWeeklyGraph.js"></script>            
 </body>
-<footer>Desenvolvido por Daniel Buck, Junho de 2020</footer>
+<footer>&copy; Daniel Buck, Junho de 2020.</footer>
 </html>
